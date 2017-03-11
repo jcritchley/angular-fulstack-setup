@@ -1,0 +1,82 @@
+Jonathans-MacBook-Pro:angular-first-example jonathancritchley$ gulp serve
+[11:52:36] Requiring external module babel-register
+[11:52:39] Using gulpfile ~/angular-first-example/gulpfile.babel.js
+[11:52:39] Starting 'serve'...
+[11:52:39] Starting 'clean:tmp'...
+[11:52:39] Starting 'lint:scripts'...
+[11:52:39] Starting 'lint:scripts:client'...
+[11:52:39] Starting 'lint:scripts:server'...
+[11:52:39] Starting 'inject'...
+[11:52:39] Starting 'inject:css'...
+[11:52:39] Starting 'copy:fonts:dev'...
+[11:52:39] Starting 'env:all'...
+[11:52:39] Finished 'env:all' after 49 ms
+[11:52:39] Starting 'typings'...
+[11:52:39] Finished 'clean:tmp' after 316 ms
+[11:52:39] [gulp-tslint] error (eofline) polyfills.ts[32, 2]: file should end with a newline
+[11:52:39] [gulp-tslint] error (no-trailing-whitespace) polyfills.ts[29, 1]: trailing whitespace
+[11:52:39] [gulp-tslint] error (no-use-before-declare) polyfills.ts[21, 5]: variable 'ENV' used before declaration
+[11:52:39] [gulp-tslint] error (whitespace) polyfills.ts[21, 3]: missing whitespace
+[11:52:39] [gulp-tslint] error (whitespace) polyfills.ts[25, 3]: missing whitespace
+[11:52:40] gulp-inject 3 files into app.css.
+[11:52:40] Finished 'inject:css' after 1.16 s
+[11:52:40] Finished 'inject' after 1.16 s
+[11:52:41] Finished 'lint:scripts:client' after 2.13 s
+[11:52:41] 
+/Users/jonathancritchley/angular-first-example/server/index.js
+  4:11  warning  Unexpected use of process.env  no-process-env
+  4:34  warning  Unexpected use of process.env  no-process-env
+
+/Users/jonathancritchley/angular-first-example/server/config/express.js
+  65:25  warning  Unexpected use of process.env  no-process-env
+
+/Users/jonathancritchley/angular-first-example/server/config/seed.js
+  48:6  error  Parsing error: Unexpected token
+
+/Users/jonathancritchley/angular-first-example/server/api/thing/thing.controller.js
+   29:7  warning  Avoid using Function.prototype.apply, instead use Reflect.apply     prefer-reflect
+   91:5  warning  Avoid using the delete keyword, instead use Reflect.deleteProperty  prefer-reflect
+  102:5  warning  Avoid using the delete keyword, instead use Reflect.deleteProperty  prefer-reflect
+
+✖ 7 problems (1 error, 6 warnings)
+
+[11:52:41] Finished 'lint:scripts:server' after 2.43 s
+[11:52:41] Finished 'lint:scripts' after 2.45 s
+[11:52:41] Finished 'copy:fonts:dev' after 2.5 s
+[11:52:42] Finished 'typings' after 2.99 s
+[11:52:42] Starting 'start:server'...
+[11:52:42] Finished 'start:server' after 11 ms
+[11:52:42] Starting 'start:client'...
+[nodemon] 1.11.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: /Users/jonathancritchley/angular-first-example/server/**/*
+[nodemon] starting `node server`
+/Users/jonathancritchley/angular-first-example/node_modules/babel-core/lib/transformation/file/index.js:600
+      throw err;
+      ^
+
+SyntaxError: /Users/jonathancritchley/angular-first-example/server/config/seed.js: Unexpected token (48:5)
+  46 |     .catch(err => console.log('error populating things', err));
+  47 | 
+> 48 |     });
+     |      ^
+  49 |   }
+  50 | }
+  51 | 
+    at Parser.pp$5.raise (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:4373:13)
+    at Parser.pp.unexpected (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:1716:8)
+    at Parser.pp$3.parseExprAtom (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:3683:12)
+    at Parser.pp$3.parseExprSubscripts (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:3427:19)
+    at Parser.pp$3.parseMaybeUnary (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:3407:19)
+    at Parser.pp$3.parseExprOps (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:3337:19)
+    at Parser.pp$3.parseMaybeConditional (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:3314:19)
+    at Parser.pp$3.parseMaybeAssign (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:3277:19)
+    at Parser.pp$3.parseExpression (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:3239:19)
+    at Parser.pp$1.parseStatement (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:1861:19)
+    at Parser.pp$1.parseBlockBody (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:2223:21)
+    at Parser.pp$1.parseBlock (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:2202:8)
+    at Parser.pp$3.parseFunctionBody (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:4154:22)
+    at Parser.pp$1.parseFunction (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:2341:8)
+    at Parser.pp$1.parseExport (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:2575:19)
+    at Parser.pp$1.parseStatement (/Users/jonathancritchley/angular-first-example/node_modules/babylon/lib/index.js:1839:74)
+[nodemon] app crashed - waiting for file changes before starting...
